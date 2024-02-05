@@ -1,5 +1,8 @@
 import Sequelize from 'sequelize'
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 import User from '../app/models/User'
 import Product from '../app/models/Product'
@@ -17,13 +20,13 @@ constructor(){
 
 }
 init(){
-    this.connection = new Sequelize('postgresql://postgres:b1b51E5d41BG1*1*bC4-cFF1AEDFBC6-@viaduct.proxy.rlwy.net:19691/railway')
+    this.connection = new Sequelize(process.env.PGDATABASE_URL)
     models.map((model) => model.init(this.connection)).map(model => model.associate && model.associate(this.connection.models))
 
 }
 
 mongo(){
-    this.mongoConnection = mongoose.connect('mongodb://localhost:27017/codeburger',{
+    this.mongoConnection = mongoose.connect(process.env.DBDATABASE_URL,{
         useNewUrlParser: true,
         useUnifiedToPology: true,
     })
