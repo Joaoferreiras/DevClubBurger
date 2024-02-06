@@ -1,9 +1,15 @@
 import express from 'express'
-import routes from './routes'
+import routes from './routes.js'
 import cors from 'cors'
 import {resolve} from 'path'
-import './database'
-import 'dotenv/config'
+import './database/index.js'
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 
 
 
