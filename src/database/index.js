@@ -10,6 +10,8 @@ import Category from '../app/models/Category.js'
 
 import configDatabase from '../config/database.js'
 
+const urlMongo = process.env.DBDATABASE_URL
+
 
 const models = [User, Product, Category]
 
@@ -26,9 +28,9 @@ init(){
 }
 
 mongo(){
-    this.mongoConnection = mongoose.connect(process.env.DBDATABASE_URL,{
+    this.mongoConnection = mongoose.connect(urlMongo ,{
         useNewUrlParser: true,
-        useUnifiedToPology: true,
+        useUnifiedTopology: true,
     })
 }
 }
