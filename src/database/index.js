@@ -28,7 +28,7 @@ init(){
 }
 
 mongo(){
-    this.mongoConnection = mongoose.connect(urlMongo ,{
+    this.mongoConnection = mongoose.connect('mongodb://mongo:Fh3H1eHBEBchb1a2h1ECAdaAA1Abb3H6@monorail.proxy.rlwy.net:41801',{
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
