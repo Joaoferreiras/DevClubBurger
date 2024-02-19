@@ -10,7 +10,7 @@ import Category from '../app/models/Category.js'
 
 import configDatabase from '../config/database.js'
 
-const urlMongo = process.env.DBDATABASE_URL
+const urlMongo = `${process.env.DBDATABASE_URL}`
 
 
 const models = [User, Product, Category]
