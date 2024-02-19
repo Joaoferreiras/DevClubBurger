@@ -28,7 +28,7 @@ init(){
 }
 
 mongo(){
-    this.mongoConnection = mongoose.connect(urlMongo ,{
+    this.mongoConnection = mongoose.connect(`mongodb://${urlMongo}` ,{
         useNewUrlParser: true,
         useUnifiedTopology: true,
     })
