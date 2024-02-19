@@ -28,7 +28,7 @@ init(){
 }
 
 mongo(){
-    this.mongoConnection = mongoose.connect(urlMongo,{})
+    this.mongoConnection = mongoose.connect('mongodb://mongo:d1C5Hfeh2beb-gd1BeG33f-f35b-He-H@monorail.proxy.rlwy.net:42709',{})
 }
 }
 
